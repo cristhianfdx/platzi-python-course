@@ -1,5 +1,7 @@
 from tkinter import *
 import os
+import sys
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -8,7 +10,7 @@ def run():
     main.title('Test window')
 
 
-    if ( sys.platform.startswith('win')):
+    if (sys.platform.startswith('win')):
         main.iconbitmap(os.path.join(BASE_DIR, 'favicon.ico'))
     else:
         logo = PhotoImage(file=os.path.join(BASE_DIR, 'favicon.png'))
