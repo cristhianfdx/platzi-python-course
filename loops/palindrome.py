@@ -15,10 +15,11 @@ def is_palindrome(word):
     return reverse_word == word
 
 if __name__ == '__main__':
-    word = str(input('Escribe una palabra: '))
-    result = is_palindrome2(word)
+    while True:
+      word = str(input('Escribe una palabra: '))
+      result = is_palindrome2(''.join(word.split()))
 
-    if result:
+      if result:
         print('{} si es un palindromo'.format(word))
-    else:
+      else:
         print('{} no es un palindromo'.format(word))
